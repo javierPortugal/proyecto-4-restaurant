@@ -2,11 +2,37 @@ import { useState } from 'react'
 import './App.css'
 import Header from './components/header'
 import Footer from './components/Footer'
+import {db} from './config/database';
+import {collection, addDoc} from "firebase/firestore";
 
 
 function App() {
- 
+  
+  const [formulario, setFormulario]= useState({
+    nombre:"",
+    email:"",
+    telefono:"",
+    comentarios:""
+  });
 
+  const handleInputChange =(event)=>{
+    setFormulario({
+        ...formulario, 
+        [event.target.name]: event.target.value
+    });
+  }
+    const reservar= async(event)=>{
+      event.preventDefault();
+      console.log(formulario);
+      //aqui mandar formulario a firebase
+      await addDoc(collection(db, "reservas"), formulario);
+      [formulario, setFormulario]= useState({
+        nombre:"",
+        email:"",
+        telefono:"",
+        comentarios:""
+      });
+    }
   return (
     <>
       <Header />
@@ -44,11 +70,13 @@ function App() {
             </div>
           </div>
         </div>
+        <hr />
+        <hr />
         <div className="row">
           <h2>Sección de reservas</h2>
           <p>En esta sección pudes reservar tu visita en el momento que desees. </p>
-        
-          <div className="col-md-6" style={{backgroungcolor:"#e5e5e5"}}>
+        <hr /><hr />
+          <div className="col-md-6" style={{backgroungcolor:"#f1f1f1"}}>
             <h3>Reserva con nosotros</h3>
             <p>A partir de tu contacto, nos comunicaremos contigo para revisar fechas y disponibilidad de horarios.</p>
             <p>Centro Histórico Ciudad de México, MX 12345</p>
@@ -60,7 +88,30 @@ function App() {
             </p>
           </div>
           <div className="col-md-6">
-          Formulario
+            <form onSubmit={reservar}>
+
+            <div className="mb-3">
+              <label className="form-label">Nombre</label>
+              <input type="text" className="form-control" name='nombre' onChange={handleInputChange}/>
+            </div>
+            <div className="mb-3">
+              <label  className="form-label">Email</label>
+              <input type="email" className="form-control" name='email' onChange={handleInputChange}/>
+            </div>
+            <div className="mb-3">
+              <label  className="form-label">Teléfono</label>
+              <input type="text" className="form-control" name='telefono' onChange={handleInputChange}/>
+            </div>
+            <div className="mb-3">
+              <label  className="form-label">Mensaje y comentarios</label>
+              <textarea className="form-control"  rows="5" name='comentarios' onChange={handleInputChange}></textarea>
+            </div>
+            <div className="row">
+              <div className="col-mid-12  text-center">
+              <button className='btn btn-primary'>Reservar</button>
+              </div>
+            </div>
+            </form>
 
           </div>
         </div>
