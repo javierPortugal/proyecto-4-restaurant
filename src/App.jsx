@@ -49,10 +49,10 @@ function App() {
         <p>En esta sección pudes reservar tu visita, recuerda hacerlo por lo menos tres horas antes. </p>
         </div>
         <div className="col-md-4" style={{backgroungcolor:"#e5e5e5"}}>
-
+          Informacion de contacto
         </div>
         <div className="col-md-8"style={{backgroungcolor:"#e5e5e5"}}>
-
+          Formulario
 
         </div>
       </div>
