@@ -11,7 +11,7 @@ function App() {
     <>
       <Header />
       <div className="container">
-        <h1 className="text-success">Especial hoy...Menú</h1>
+        <h2 className="text-success">Especial hoy...Menú</h2>
         <div className="row">
           <div className="col-md-4">
             <div class="card">
@@ -43,6 +43,17 @@ function App() {
               </div>
             </div>
           </div>
+        </div>
+        <div className="row">
+        <h2>Sección de reservas</h2>
+        <p>En esta sección pudes reservar tu visita, recuerda hacerlo por lo menos tres horas antes. </p>
+        </div>
+        <div className="col-md-4">
+
+        </div>
+        <div className="col-md-8">
+
+          
         </div>
       </div>
       
