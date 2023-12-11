@@ -26,12 +26,7 @@ function App() {
       console.log(formulario);
       //aqui mandar formulario a firebase
       await addDoc(collection(db, "reservas"), formulario);
-      [formulario, setFormulario]= useState({
-        nombre:"",
-        email:"",
-        telefono:"",
-        comentarios:""
-      });
+    
     }
   return (
     <>
