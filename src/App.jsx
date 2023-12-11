@@ -46,12 +46,20 @@ function App() {
         </div>
         <div className="row">
           <h2>Sección de reservas</h2>
-          <p>En esta sección pudes reservar tu visita, recuerda hacerlo por lo menos tres horas antes. </p>
+          <p>En esta sección pudes reservar tu visita en el momento que desees. </p>
         
-          <div className="col-md-6 bg-gray-50" style={{backgroungcolor:"#e5e5e5"}}>
-          Informacion de contacto
+          <div className="col-md-6" style={{backgroungcolor:"#e5e5e5"}}>
+            <h3>Reserva con nosotros</h3>
+            <p>A partir de tu contacto, nos comunicaremos contigo para revisar fechas y disponibilidad de horarios.</p>
+            <p>Centro Histórico Ciudad de México, MX 12345</p>
+            <p>+1 (555) 123-4567</p>
+            <p>contacto@lamiafamiglia.com</p>
+            <p>
+            2021. UCamp. Todos los derechos reservados.
+            Esta es una aplicación ficticia para fines académicos.
+            </p>
           </div>
-          <div className="col-md-6"style={{backgroungcolor:"#e5e5e5"}}>
+          <div className="col-md-6">
           Formulario
 
           </div>
