@@ -45,15 +45,16 @@ function App() {
           </div>
         </div>
         <div className="row">
-        <h2>Sección de reservas</h2>
-        <p>En esta sección pudes reservar tu visita, recuerda hacerlo por lo menos tres horas antes. </p>
-        </div>
-        <div className="col-md-4" style={{backgroungcolor:"#e5e5e5"}}>
+          <h2>Sección de reservas</h2>
+          <p>En esta sección pudes reservar tu visita, recuerda hacerlo por lo menos tres horas antes. </p>
+        
+          <div className="col-md-6 bg-gray-50" style={{backgroungcolor:"#e5e5e5"}}>
           Informacion de contacto
-        </div>
-        <div className="col-md-8"style={{backgroungcolor:"#e5e5e5"}}>
+          </div>
+          <div className="col-md-6"style={{backgroungcolor:"#e5e5e5"}}>
           Formulario
 
+          </div>
         </div>
       </div>
       
