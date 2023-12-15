@@ -4,6 +4,8 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 import {db} from './config/database';
 import {collection, addDoc} from "firebase/firestore";
+import heroImg from './assets/img/fries-hero-bg.jpg';
+
 
 
 function App() {
@@ -36,7 +38,7 @@ function App() {
         <div className="row">
           <div className="col-md-4">
             <div class="card">
-              <img src="src/assets/img/fries-hero-bg.jpg" class="card-img-top" alt="No encontro la imagen!!"/>
+              <img src={heroImg} class="card-img-top" alt="No encontro la imagen!!"/>
               <div className="card-body">
               <h5 className="card-title">Papas Mexas</h5>
               <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
